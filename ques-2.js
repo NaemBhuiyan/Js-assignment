@@ -9,9 +9,9 @@ const makeAllReadFalse = () => {
 
   let allRead = true;
 
-  const isReadFalse = notifications.find((item) => !item.read);
+  const isReadFalse = notifications.find((item) => !item.read).read;
 
-  if (!isReadFalse.read) {
+  if (!isReadFalse) {
     allRead = false;
   }
 
