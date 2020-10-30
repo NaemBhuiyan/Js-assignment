@@ -9,13 +9,12 @@ const makeAllReadFalse = () => {
 
   let allRead = true;
 
-  const isReadFalse = notifications.find((item) => !item.read).read;
-
-  if (!isReadFalse) {
+  const isReadFalse = notifications.some((item) => !item.read);
+  if (isReadFalse) {
     allRead = false;
   }
-
+  
   return allRead;
 };
 
-console.log(makeAllReadFalse());
+makeAllReadFalse()
